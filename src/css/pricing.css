@@ -1,0 +1,37 @@
+/* TARIFS */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.price {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.price h4 {
+  margin: 0 0 6px;
+}
+
+.price .num {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.price ul {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+}
+
+.price li {
+  margin: 6px 0;
+}
+
+.price.featured {
+  border: 1px solid rgba(78, 161, 255, 0.45);
+}

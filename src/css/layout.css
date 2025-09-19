@@ -1,0 +1,84 @@
+/* ==============================
+   S E C T I O N: Layout principal
+   ============================== */
+
+/* ========== S U B - S E C T I O N: Rail de défilement horizontal ========== */
+
+/* ---------- Sub-sub-section: Conteneur principal ---------- */
+.rail {
+  position: fixed;
+  inset: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+/* ---------- Sub-sub-section: Adaptation mobile ---------- */
+@media (max-width: 768px) {
+  .rail {
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rail::-webkit-scrollbar {
+    width: 6px;
+    height: 0;
+  }
+}
+
+/* ---------- Sub-sub-section: Style de la scrollbar ---------- */
+.rail::-webkit-scrollbar {
+  height: 10px;
+}
+
+.rail::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+/* ========== S U B - S E C T I O N: Sections de contenu ========== */
+
+/* ---------- Sub-sub-section: Section par défaut ---------- */
+section {
+  scroll-snap-align: start;
+  min-width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 90px 6vw 40px;
+}
+
+/* ---------- Sub-sub-section: Sections mobile ---------- */
+@media (max-width: 768px) {
+  section {
+    min-width: 100vw;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 4vw 40px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    scroll-snap-align: none;
+  }
+}
+
+/* ========== S U B - S E C T I O N: Cartes de contenu ========== */
+
+/* ---------- Sub-sub-section: Style des cartes ---------- */
+.card {
+  width: min(1200px, 92vw);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 34px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}

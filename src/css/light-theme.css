@@ -1,0 +1,241 @@
+/* Styles spécifiques au thème clair */
+
+/* FOND GÉNÉRAL - Thème clair */
+[data-theme='light'] body {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+[data-theme='light'] .rail {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+}
+
+/* HERO - Thème clair */
+[data-theme='light'] .badge {
+  background: rgba(37, 99, 235, 0.1);
+  color: #1e40af;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+[data-theme='light'] .btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='light'] .btn-ghost:hover {
+  background: var(--soft);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* BOUTONS - Thème clair */
+[data-theme='light'] .btn {
+  color: #0b0d13;
+}
+
+[data-theme='light'] .btn-primary {
+  background: var(--brand);
+  color: white;
+}
+
+[data-theme='light'] .btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+[data-theme='light'] .floating {
+  background: var(--glass);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text);
+}
+
+/* SERVICES - Thème clair */
+[data-theme='light'] .service {
+  background: var(--panel);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .service:hover {
+  background: var(--soft);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .pill {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--muted);
+}
+
+/* TARIFS - Thème clair */
+[data-theme='light'] .price {
+  background: var(--panel);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .price.featured {
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+}
+
+/* CONTACT - Thème clair */
+[data-theme='light'] .panel {
+  background: var(--panel);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .map {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .review {
+  background: var(--soft);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] input,
+[data-theme='light'] textarea,
+[data-theme='light'] select {
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='light'] input:focus,
+[data-theme='light'] textarea:focus,
+[data-theme='light'] select:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme='light'] input::placeholder,
+[data-theme='light'] textarea::placeholder {
+  color: var(--muted);
+}
+
+/* GALLERY - Thème clair */
+[data-theme='light'] .comparison-item {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .comparison-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='light'] .comparison-modal {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+[data-theme='light'] .comparison-label-before,
+[data-theme='light'] .comparison-label-after {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+/* LAYOUT - Thème clair */
+[data-theme='light'] .card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
+}
+
+[data-theme='light'] .rail::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* NAVIGATION - Thème clair */
+[data-theme='light'] .topbar {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .brand {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .nav a {
+  color: var(--text);
+}
+
+[data-theme='light'] .nav a.active,
+[data-theme='light'] .nav a:hover {
+  background: var(--soft);
+}
+
+[data-theme='light'] .mobile-nav {
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .mobile-nav a {
+  color: var(--text);
+}
+
+[data-theme='light'] .mobile-nav a.active,
+[data-theme='light'] .mobile-nav a:hover {
+  background: var(--brand);
+  color: white;
+}
+
+[data-theme='light'] .mobile-nav-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* BOUTON DE THÈME - Thème clair */
+[data-theme='light'] .switch .slider {
+  background-color: #e2e8f0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .switch .sun-moon {
+  background-color: #fbbf24;
+}
+
+[data-theme='light'] #theme-toggle:checked + .slider {
+  background-color: #1e293b;
+}
+
+[data-theme='light'] #theme-toggle:checked + .slider .sun-moon {
+  background-color: #f8fafc;
+}
+
+/* Transitions fluides pour le changement de thème */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Amélioration des contrastes pour l'accessibilité */
+[data-theme='light'] h1,
+[data-theme='light'] h2,
+[data-theme='light'] h3,
+[data-theme='light'] h4 {
+  color: var(--text);
+}
+
+[data-theme='light'] .note {
+  color: var(--muted);
+}
+
+/* Focus visible pour l'accessibilité */
+[data-theme='light'] button:focus-visible,
+[data-theme='light'] a:focus-visible,
+[data-theme='light'] input:focus-visible,
+[data-theme='light'] textarea:focus-visible,
+[data-theme='light'] select:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}

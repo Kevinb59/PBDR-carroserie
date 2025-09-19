@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- ==============================
+         S E C T I O N: Métadonnées et liens administration
+         ============================== -->
+
+    <!-- ========== S U B - S E C T I O N: Métadonnées de base ========== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Administration - PBDR</title>
+    <meta
+      name="description"
+      content="Interface d'administration pour gérer le contenu du site"
+    />
+
+    <!-- ========== S U B - S E C T I O N: Optimisation des polices ========== -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ========== S U B - S E C T I O N: Feuilles de style ========== -->
+    <link rel="stylesheet" href="../src/css/variables.css" />
+    <link rel="stylesheet" href="../src/css/reset.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <!-- ==============================
+         S E C T I O N: Interface d'administration
+         ============================== -->
+
+    <div class="admin-container">
+      <!-- ========== S U B - S E C T I O N: Sidebar de navigation ========== -->
+      <aside class="sidebar">
+        <!-- ---------- Sub-sub-section: En-tête de la sidebar ---------- -->
+        <div class="sidebar-header">
+          <h2>Administration</h2>
+          <p>PBDR</p>
+        </div>
+
+        <!-- ---------- Sub-sub-section: Navigation principale ---------- -->
+        <nav class="sidebar-nav">
+          <a href="#dashboard" class="nav-item active" data-section="dashboard">
+            <span class="icon">📊</span>
+            Tableau de bord
+          </a>
+          <a href="#services" class="nav-item" data-section="services">
+            <span class="icon">🛠️</span>
+            Services
+          </a>
+          <a href="#pricing" class="nav-item" data-section="pricing">
+            <span class="icon">💰</span>
+            Tarifs
+          </a>
+          <a href="#gallery" class="nav-item" data-section="gallery">
+            <span class="icon">🖼️</span>
+            Galerie
+          </a>
+          <a href="#reviews" class="nav-item" data-section="reviews">
+            <span class="icon">⭐</span>
+            Avis clients
+          </a>
+          <a href="#settings" class="nav-item" data-section="settings">
+            <span class="icon">⚙️</span>
+            Paramètres
+          </a>
+        </nav>
+
+        <!-- ---------- Sub-sub-section: Pied de sidebar ---------- -->
+        <div class="sidebar-footer">
+          <a href="../index.html" class="btn btn-ghost">← Retour au site</a>
+        </div>
+      </aside>
+
+      <!-- ========== S U B - S E C T I O N: Contenu principal ========== -->
+      <main class="main-content">
+        <!-- ---------- Sub-sub-section: En-tête du contenu ---------- -->
+        <header class="content-header">
+          <h1 id="page-title">Tableau de bord</h1>
+          <div class="header-actions">
+            <button class="btn btn-primary" id="save-all">Sauvegarder</button>
+          </div>
+        </header>
+
+        <!-- ========== S U B - S E C T I O N: Corps du contenu ========== -->
+        <div class="content-body">
+          <!-- ---------- Sub-sub-section: Section Tableau de bord ---------- -->
+          <section id="dashboard-section" class="content-section active">
+            <!-- Grille des statistiques -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <h3>Visiteurs aujourd'hui</h3>
+                <div class="stat-number">127</div>
+              </div>
+              <div class="stat-card">
+                <h3>Devis demandés</h3>
+                <div class="stat-number">8</div>
+              </div>
+              <div class="stat-card">
+                <h3>Services actifs</h3>
+                <div class="stat-number">4</div>
+              </div>
+              <div class="stat-card">
+                <h3>Note moyenne</h3>
+                <div class="stat-number">4.9/5</div>
+              </div>
+            </div>
+
+            <!-- Activité récente -->
+            <div class="recent-activity">
+              <h3>Activité récente</h3>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <span class="time">Il y a 2h</span>
+                  <span class="action"
+                    >Nouveau devis demandé - Débosselage</span
+                  >
+                </div>
+                <div class="activity-item">
+                  <span class="time">Il y a 4h</span>
+                  <span class="action">Avis client ajouté - 5 étoiles</span>
+                </div>
+                <div class="activity-item">
+                  <span class="time">Hier</span>
+                  <span class="action">Tarif mis à jour - Lustrage</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ---------- Sub-sub-section: Section Services ---------- -->
+          <section id="services-section" class="content-section">
+            <div class="section-header">
+              <h2>Gestion des services</h2>
+              <button class="btn btn-primary" id="add-service">
+                + Ajouter un service
+              </button>
+            </div>
+            <div class="services-list" id="services-list">
+              <!-- Services will be loaded dynamically -->
+            </div>
+          </section>
+
+          <!-- ---------- Sub-sub-section: Section Tarifs ---------- -->
+          <section id="pricing-section" class="content-section">
+            <div class="section-header">
+              <h2>Gestion des tarifs</h2>
+              <button class="btn btn-primary" id="add-pricing">
+                + Ajouter un tarif
+              </button>
+            </div>
+            <div class="pricing-list" id="pricing-list">
+              <!-- Pricing will be loaded dynamically -->
+            </div>
+          </section>
+
+          <!-- ---------- Sub-sub-section: Section Galerie ---------- -->
+          <section id="gallery-section" class="content-section">
+            <div class="section-header">
+              <h2>Gestion de la galerie</h2>
+              <button class="btn btn-primary" id="add-image">
+                + Ajouter une image
+              </button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+              <!-- Gallery will be loaded dynamically -->
+            </div>
+          </section>
+
+          <!-- ---------- Sub-sub-section: Section Avis ---------- -->
+          <section id="reviews-section" class="content-section">
+            <div class="section-header">
+              <h2>Gestion des avis</h2>
+              <button class="btn btn-primary" id="add-review">
+                + Ajouter un avis
+              </button>
+            </div>
+            <div class="reviews-list" id="reviews-list">
+              <!-- Reviews will be loaded dynamically -->
+            </div>
+          </section>
+
+          <!-- ---------- Sub-sub-section: Section Paramètres ---------- -->
+          <section id="settings-section" class="content-section">
+            <div class="section-header">
+              <h2>Paramètres du site</h2>
+            </div>
+            <div class="settings-form">
+              <div class="form-group">
+                <label for="site-title">Titre du site</label>
+                <input type="text" id="site-title" value="Votre Carrosserie" />
+              </div>
+              <div class="form-group">
+                <label for="site-description">Description</label>
+                <textarea id="site-description">
+Débosselage sans peinture, nettoyage intérieur/extérieur, lustrage et rénovation d'optique. Intervention rapide, qualité pro.</textarea
+                >
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Téléphone</label>
+                <input type="tel" id="contact-phone" value="06 12 34 56 78" />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  value="contact@votrecarrosserie.fr"
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-address">Adresse</label>
+                <input
+                  type="text"
+                  id="contact-address"
+                  value="12 rue de l'Atelier, 59000 Lille"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- ==============================
+         S E C T I O N: Scripts JavaScript administration
+         ============================== -->
+
+    <!-- Point d'entrée principal de l'administration -->
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "carrosserie-website",
+  "version": "1.0.0",
+  "description": "Site web pour carrosserie - Débosselage sans peinture & detailing",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build completed'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "carrosserie",
+    "débosselage",
+    "detailing",
+    "website"
+  ],
+  "author": "PBDR",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

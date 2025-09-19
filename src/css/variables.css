@@ -1,0 +1,59 @@
+:root {
+  /* Thème sombre (par défaut) */
+  --bg: #0f1115; /* fond principal */
+  --panel: #141826; /* blocs */
+  --soft: #1b2032; /* hover */
+  --text: #e7ecf3; /* texte principal */
+  --muted: #9aa3b2; /* texte secondaire */
+  --brand: #4ea1ff; /* couleur d'accent */
+  --ok: #22c55e; /* vert */
+  --warn: #fbbf24; /* jaune */
+  --radius: 22px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --glass: rgba(255, 255, 255, 0.06);
+}
+
+/* Fond sombre par défaut */
+body {
+  background: linear-gradient(135deg, #0f1115 0%, #141826 50%, #1b2032 100%);
+  min-height: 100vh;
+}
+
+.rail {
+  background: linear-gradient(135deg, #0f1115 0%, #141826 50%, #1b2032 100%);
+}
+
+/* BOUTONS - Thème sombre */
+.btn-primary:hover {
+  background: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(78, 161, 255, 0.3);
+}
+
+/* Thème clair */
+[data-theme='light'] {
+  --bg: #fefefe; /* fond principal */
+  --panel: #ffffff; /* blocs */
+  --soft: #f1f5f9; /* hover */
+  --text: #0f172a; /* texte principal */
+  --muted: #64748b; /* texte secondaire */
+  --brand: #2563eb; /* couleur d'accent */
+  --ok: #059669; /* vert */
+  --warn: #d97706; /* jaune */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --glass: rgba(255, 255, 255, 0.9);
+}
+
+/* Thème sombre */
+[data-theme='dark'] {
+  --bg: #0f1115; /* fond principal */
+  --panel: #141826; /* blocs */
+  --soft: #1b2032; /* hover */
+  --text: #e7ecf3; /* texte principal */
+  --muted: #9aa3b2; /* texte secondaire */
+  --brand: #4ea1ff; /* couleur d'accent */
+  --ok: #22c55e; /* vert */
+  --warn: #fbbf24; /* jaune */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --glass: rgba(255, 255, 255, 0.06);
+}
